@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="46.0" prefWidth="600.0" style="-fx-background-image: bg_blue.jpg; -fx-border-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.slau.inputDateSeidelController">
+    <children>
+      <ImageView fitHeight="500.0" fitWidth="760.0">
+         <image>
+            <Image url="@../../../bg_blue.jpg" />
+         </image>
+      </ImageView>
+        <Label alignment="CENTER" prefHeight="90.0" prefWidth="760.0" style="-fx-background-color: #e0e0e0;" text="Решение уравнений методом итерации и методом Зейделя" textAlignment="CENTER">
+            <font>
+                <Font name="Sitka Small Bold" size="22.0" />
+            </font>
+        </Label>
+      <TextField fx:id="inputA11" alignment="CENTER" layoutX="263.0" layoutY="208.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="inputA12" alignment="CENTER" layoutX="341.0" layoutY="208.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="inputA13" alignment="CENTER" layoutX="418.0" layoutY="208.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="inputA21" alignment="CENTER" layoutX="263.0" layoutY="269.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="inputA22" alignment="CENTER" layoutX="341.0" layoutY="269.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="inputA23" alignment="CENTER" layoutX="418.0" layoutY="269.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="inputA31" alignment="CENTER" layoutX="263.0" layoutY="326.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="inputA32" alignment="CENTER" layoutX="341.0" layoutY="326.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="inputA33" alignment="CENTER" layoutX="418.0" layoutY="326.0" prefHeight="25.0" prefWidth="40.0" />
+      <Text layoutX="196.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите данные матрицы (методом Зейделя)">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="486.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=" />
+      <Text layoutX="486.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=" />
+      <Text layoutX="486.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="=" />
+      <TextField fx:id="inputB1" alignment="CENTER" layoutX="512.0" layoutY="208.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="inputB2" alignment="CENTER" layoutX="512.0" layoutY="269.0" prefHeight="25.0" prefWidth="40.0" />
+      <TextField fx:id="inputB3" alignment="CENTER" layoutX="512.0" layoutY="326.0" prefHeight="25.0" prefWidth="40.0" />
+      <Text layoutX="218.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите точность">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="inputT" alignment="CENTER" layoutX="403.0" layoutY="413.0" prefHeight="25.0" prefWidth="70.0" />
+      <Button fx:id="buttonСalculate" layoutX="573.0" layoutY="415.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #83E4FA; -fx-border-color: black; -fx-border-radius: 5px;" text="Рассчитать" />
+      <Label fx:id="exceptionDate" layoutX="39.0" layoutY="269.0" prefHeight="25.0" prefWidth="203.0" text="Введите правильне данные" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
