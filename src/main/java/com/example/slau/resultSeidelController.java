@@ -6,7 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.sql.ResultSet;
 
 public class resultSeidelController {
     Double x1;
@@ -76,8 +75,6 @@ public class resultSeidelController {
                 e.printStackTrace();
             }
             comparisonButton.getScene().getWindow().hide();
-//            DatabaseHandler dbHandler1 = new DatabaseHandler();
-//            dbHandler1.getDataSeidel(dbHandler1);
         });
     }
 

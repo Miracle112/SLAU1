@@ -7,9 +7,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class Application extends javafx.application.Application {
 
@@ -57,5 +54,4 @@ public class Application extends javafx.application.Application {
     public static void main(String[] args) {
         launch();
     }
-
 }

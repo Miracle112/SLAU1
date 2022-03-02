@@ -51,7 +51,7 @@ public class DatabaseHandler extends Configs {
 
     }
 
-    public float[] getDataSeidel(DatabaseHandler dd) {
+    public float[] getDataSeidel() {
 
         String select = "SELECT x1, x2, x3 FROM " + Const.RESULT_SEIDEL + " WHERE (SELECT MAX(id) FROM " + Const.RESULT_SEIDEL + ") = id";
 
@@ -76,7 +76,7 @@ public class DatabaseHandler extends Configs {
         return Array_seidel;
     }
 
-    public float[] getDataIter(DatabaseHandler dd) {
+    public float[] getDataIter() {
 
         String select = "SELECT x1, x2, x3 FROM " + Const.RESULT_ITER + " WHERE (SELECT MAX(id) FROM " + Const.RESULT_ITER + ") = id";
 
