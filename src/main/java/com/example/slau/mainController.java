@@ -21,7 +21,6 @@ public class mainController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            // Закрываем окно
             button_iteration_method.getScene().getWindow().hide();
         });
         button_seidel_method.setOnAction(event -> {
@@ -30,7 +29,6 @@ public class mainController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            // Закрываем окно
             button_seidel_method.getScene().getWindow().hide();
         });
     }

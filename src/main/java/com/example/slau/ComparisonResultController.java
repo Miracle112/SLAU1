@@ -16,8 +16,6 @@ public class ComparisonResultController {
     float[] Array_seidel;
     float[] Array_iter;
 
-
-
     @FXML
     private TextField answer;
 
@@ -79,8 +77,4 @@ public class ComparisonResultController {
         seidelX2.setText(String.valueOf(seidel_x02));
         seidelX3.setText(String.valueOf(seidel_x03));
     }
-
-
-
-
 }

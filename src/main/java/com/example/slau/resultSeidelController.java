@@ -47,7 +47,6 @@ public class resultSeidelController {
         answer1.setText(String.valueOf(x1));
         answer2.setText(String.valueOf(x2));
         answer3.setText(String.valueOf(x3));
-
     }
 
     @FXML
@@ -77,5 +76,4 @@ public class resultSeidelController {
             comparisonButton.getScene().getWindow().hide();
         });
     }
-
 }

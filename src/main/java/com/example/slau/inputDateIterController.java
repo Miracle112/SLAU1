@@ -1,9 +1,7 @@
 package com.example.slau;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -124,7 +122,6 @@ public class inputDateIterController {
                 double t03 = 1;
 
                 for( int i = 0; i < 100; i++) {
-                    // Линейное преобразование
                     if (Math.abs(a11) < Math.abs(a12) || Math.abs(a11) < Math.abs(a13)) {
                         double aa11 = a11 + a31 * 2 + a21 * 2;
                         double aa12 = a12 + a32 * 2 + a22 * 2;
@@ -198,7 +195,6 @@ public class inputDateIterController {
                 stage.show();
                 buttonСalculate.getScene().getWindow().hide();
             }
-
         });
     }
 }

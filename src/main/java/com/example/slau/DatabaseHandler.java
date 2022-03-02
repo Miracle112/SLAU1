@@ -48,13 +48,11 @@ public class DatabaseHandler extends Configs {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
     public float[] getDataSeidel() {
-
-        String select = "SELECT x1, x2, x3 FROM " + Const.RESULT_SEIDEL + " WHERE (SELECT MAX(id) FROM " + Const.RESULT_SEIDEL + ") = id";
-
+        String select = "SELECT x1, x2, x3 FROM " + Const.RESULT_SEIDEL + " WHERE (SELECT MAX(id) FROM "
+                + Const.RESULT_SEIDEL + ") = id";
         try {
             Statement statement = getDbConnection().createStatement();
             result = statement.executeQuery(select);
@@ -77,9 +75,8 @@ public class DatabaseHandler extends Configs {
     }
 
     public float[] getDataIter() {
-
-        String select = "SELECT x1, x2, x3 FROM " + Const.RESULT_ITER + " WHERE (SELECT MAX(id) FROM " + Const.RESULT_ITER + ") = id";
-
+        String select = "SELECT x1, x2, x3 FROM " + Const.RESULT_ITER + " WHERE (SELECT MAX(id) FROM "
+                + Const.RESULT_ITER + ") = id";
         try {
             Statement statement = getDbConnection().createStatement();
             result = statement.executeQuery(select);
@@ -100,5 +97,4 @@ public class DatabaseHandler extends Configs {
         }
         return Array_iter;
     }
-
 }
