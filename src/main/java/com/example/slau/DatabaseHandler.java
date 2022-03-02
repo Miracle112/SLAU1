@@ -5,6 +5,8 @@ import java.sql.*;
 public class DatabaseHandler extends Configs {
     ResultSet result;
     Connection dbConnection;
+    float[] Array_seidel;
+    float[] Array_iter;
 
     public Connection getDbConnection() throws ClassNotFoundException, SQLException{
         String connectionString = "jdbc:mysql://" + dbHost + ":"
@@ -49,7 +51,7 @@ public class DatabaseHandler extends Configs {
 
     }
 
-    public ResultSet getDataSeidel(DatabaseHandler dd) {
+    public float[] getDataSeidel(DatabaseHandler dd) {
 
         String select = "SELECT x1, x2, x3 FROM " + Const.RESULT_SEIDEL + " WHERE (SELECT MAX(id) FROM " + Const.RESULT_SEIDEL + ") = id";
 
@@ -67,13 +69,14 @@ public class DatabaseHandler extends Configs {
             float seidel_x1 = Float.parseFloat(result.getString(1));
             float seidel_x2 = Float.parseFloat(result.getString(2));
             float seidel_x3 = Float.parseFloat(result.getString(3));
+            Array_seidel = new float[]{seidel_x1, seidel_x2, seidel_x3};
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return result;
+        return Array_seidel;
     }
 
-    public ResultSet getDataIter(DatabaseHandler dd) {
+    public float[] getDataIter(DatabaseHandler dd) {
 
         String select = "SELECT x1, x2, x3 FROM " + Const.RESULT_ITER + " WHERE (SELECT MAX(id) FROM " + Const.RESULT_ITER + ") = id";
 
@@ -91,10 +94,11 @@ public class DatabaseHandler extends Configs {
             float iter_x1 = Float.parseFloat(result.getString(1));
             float iter_x2 = Float.parseFloat(result.getString(2));
             float iter_x3 = Float.parseFloat(result.getString(3));
+            Array_iter = new float[]{iter_x1, iter_x2, iter_x3};
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return result;
+        return Array_iter;
     }
 
 }
