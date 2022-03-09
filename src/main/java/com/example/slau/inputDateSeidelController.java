@@ -104,7 +104,8 @@ public class inputDateSeidelController {
                 double b1 = dataRecording.get(9);
                 double b2 = dataRecording.get(10);
                 double b3 = dataRecording.get(11);
-                double t = dataRecording.get(12);
+                float t = dataRecording.get(12);
+
 
                 double x01 = b1 / a11;
                 double x02 = b2 / a22;
@@ -188,6 +189,13 @@ public class inputDateSeidelController {
                     }
                 }
 
+                int lenT = Float.toString(t).split("\\.")[1].length();
+                double scale = Math.pow(10, lenT);
+                x01 = Math.ceil(x01 * scale) / scale;
+                x02 = Math.ceil(x02 * scale) / scale;
+                x03 = Math.ceil(x03 * scale) / scale;
+
+                System.out.println(t);
                 FXMLLoader loader = new FXMLLoader(inputDateSeidelController.class.getResource("result_seidel.fxml"));
                 Stage stage = new Stage();
                 try {

@@ -9,8 +9,7 @@ public class DatabaseHandler extends Configs {
     float[] Array_iter;
 
     public Connection getDbConnection() throws ClassNotFoundException, SQLException{
-        String connectionString = "jdbc:mysql://" + dbHost + ":"
-                + dbPort + "/" + dbName;
+        String connectionString = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName;
 
         Class.forName("com.mysql.cj.jdbc.Driver");
 
