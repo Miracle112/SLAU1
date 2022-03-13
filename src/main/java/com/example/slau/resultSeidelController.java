@@ -70,10 +70,14 @@ public class resultSeidelController {
         comparisonButton.setOnAction(event -> {
             try {
                 Application.openAnotherWindow("comparison_result.fxml");
+                comparisonButton.getScene().getWindow().hide();
             } catch (IOException e) {
                 e.printStackTrace();
+                comparisonText.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+                comparisonText.setVisible(true);
             }
-            comparisonButton.getScene().getWindow().hide();
         });
     }
 }
